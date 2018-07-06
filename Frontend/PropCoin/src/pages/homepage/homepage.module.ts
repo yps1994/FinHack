@@ -13,4 +13,5 @@ import { HomePage } from './homepage';
     HomePage
   ]
 })
+
 export class HomePageModule { }
