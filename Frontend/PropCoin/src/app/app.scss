@@ -14,3 +14,32 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+// Fix for custom icon from StackOverFlow.
+// https://stackoverflow.com/questions/38462885/add-custom-icon-in-ionic-2
+
+ion-icon {
+    &[class*="propcoin-"] {
+        // Instead of using the font-based icons
+        // We're applying SVG masks
+        mask-size: contain;
+        mask-position: 50% 50%;
+        mask-repeat: no-repeat;
+        background: currentColor;
+        width: 1em;
+        height: 1em;
+    }
+    // custom icons from Google Materials
+    &[class*="propcoin-balance"] {
+        mask-image: url(../assets/icon/balance.svg);
+    }
+    &[class*="propcoin-transfer"] {
+        mask-image: url(../assets/icon/transfer.svg);
+    }
+    &[class*="propcoin-wallet"] {
+        mask-image: url(../assets/icon/wallet.svg);
+    }
+    &[class*="propcoin-exchange"] {
+        mask-image: url(../assets/icon/exchange.svg);
+    }
+}
