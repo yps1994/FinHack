@@ -4,14 +4,14 @@
       Landing
     </ion-title>
     <ion-buttons end>
-    <button ion-button item-right id="skipbutton">Skip</button>
+      <button ion-button id="skipbutton" (click)="gotoWallet()">Skip</button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-    <ion-slides paper>
+    <ion-slides pager="true">
 
         <ion-slide>
           <h2>PropCoin</h2>
