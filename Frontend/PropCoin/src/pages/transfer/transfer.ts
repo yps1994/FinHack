@@ -11,4 +11,11 @@ export class TransferPage {
   constructor(public navCtrl: NavController, public menu: MenuController, public platform: Platform) {
    
   }
+
+  //For now, do nothing and WIP.
+  gotoWallet() {
+  
+  }
+
+
 }

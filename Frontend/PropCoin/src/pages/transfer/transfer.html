@@ -7,34 +7,47 @@
 </ion-header>
 
 <ion-content no-bounce>
-  Receive
+  <!-- <h1 class="receive-label">Receive</h1> -->
+
+  <ion-card>
+    <ion-grid>
+      <ion-row> <ion-label> Receive </ion-label> </ion-row>
+      <ion-row>
+        <ion-col col-3>
+          <ion-img class=".qr-code-placeholder-border" width="80" height="80" src="qr-code-placeholder.png"></ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-list>
+            <ion-item>
+              <ion-input placeholder="Address"></ion-input>
+              <!-- <ion-label> Address </ion-label> -->
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card>
+      <ion-grid>
+        <ion-row> <ion-label> Send </ion-label> </ion-row>
+        <ion-row>
+          <ion-col col-3>
+            <ion-img class=".qr-code-placeholder-border" width="80" height="80" src="qr-code-placeholder.png"></ion-img>
+          </ion-col>
+          <ion-col>
+            <ion-list>
+              <ion-item>
+                <ion-input placeholder="Input"></ion-input>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row justify-content-end>
+          <ion-col col-3>
+            <button ion-button (click) = "sendCoins()">Send </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
 </ion-content>
-
-<!-->
-<ion-header no-shadow>
-  <ion-navbar>
-    <ion-buttons end *ngIf="showSkip">
-      <button ion-button (click)="startApp()" color="primary">{{ 'TUTORIAL_SKIP_BUTTON' | translate}}</button>
-    </ion-buttons>
-  </ion-navbar>
-</ion-header>
-
-<ion-content no-bounce>
-  <ion-slides pager="true" dir="{{dir}}" (ionSlideWillChange)="onSlideChangeStart($event)">
-    <ion-slide *ngFor="let slide of slides">
-      <img [src]="slide.image" class="slide-image" />
-      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
-      <p [innerHTML]="slide.description"></p>
-    </ion-slide>
-    <ion-slide>
-      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image" />
-      <h2 class="slide-title">{{ 'TUTORIAL_SLIDE4_TITLE' | translate }}</h2>
-      <button ion-button icon-end large clear (click)="startApp()">
-        {{ 'TUTORIAL_CONTINUE_BUTTON' | translate }}
-        <ion-icon name="arrow-forward"></ion-icon>
-      </button>
-    </ion-slide>
-  </ion-slides>
-</ion-content>
-
--->
