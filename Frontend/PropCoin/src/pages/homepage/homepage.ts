@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
+import { MainPage } from '../';
 
 @IonicPage()
 @Component({
@@ -12,4 +13,14 @@ export class HomePage {
     
   }
 
+  doLogin() {
+    this.gotoMainPage();
+  }
+
+  createWallet() {
+    this.gotoMainPage();
+  }
+  gotoMainPage() {
+    this.navCtrl.push(MainPage);
+  }
 }

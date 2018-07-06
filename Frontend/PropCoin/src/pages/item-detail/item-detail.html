@@ -8,11 +8,20 @@
 
 
 <ion-content>
-  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
-  </div>
+  <!-- <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  </div> -->
 
-  <div class="item-detail" padding>
-    <h2>{{item.name}}</h2>
-    <p>{{item.about}}</p>
+  <div class="coin-onhand" padding>
+    <h2>{{item.coinname}}</h2>
+    {{item.desc}}
+    <br>
+    <p>Coin On Hand:
+       {{item.onhandttl}}</p>
+
+  </div>
+  <div class="coin-xchg" padding>
+    <p>Coin Exchange:
+      {{item.xchgttl}}</p>
+    
   </div>
 </ion-content>
