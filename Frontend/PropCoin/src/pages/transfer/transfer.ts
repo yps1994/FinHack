@@ -8,14 +8,14 @@ import { IonicPage, MenuController, NavController, Platform } from 'ionic-angula
 })
 export class TransferPage {
 
+  sendAddress: any;
+
   constructor(public navCtrl: NavController, public menu: MenuController, public platform: Platform) {
-   
+    this.sendAddress = "";
   }
 
   //For now, do nothing and WIP.
-  gotoWallet() {
-  
+  sendCoins() {
+    console.log(this.sendAddress)
   }
-
-
 }
