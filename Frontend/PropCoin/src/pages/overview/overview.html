@@ -38,7 +38,7 @@
   </ion-grid>
 
   <ion-list>
-    <button detail-none class="grid-style-1" ion-item *ngFor="let data of balanceData" (click)="gotoCorrespondingWallet(data.region, transactionData)">
+    <button detail-none class="grid-style-1" ion-item *ngFor="let data of balanceData" (click)="gotoCorrespondingWallet(data, transactionData)">
     <!-- <button detail-none class="grid-style-1" ion-item *ngFor="let data of balanceData"> -->
       <!-- <ion-col>{{data.region}}</ion-col> --><ion-row >
       <ion-col><ion-avatar item-start> <img src={{data.img}}></ion-avatar></ion-col>

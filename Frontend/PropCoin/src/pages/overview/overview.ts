@@ -24,6 +24,7 @@ export class OverviewPage {
 
 
     this.balanceData = [{
+      accountID: "002729655",
       img: "/assets/img/2.1_2.png",
       region: "HK Island",
       coins: 5.006,
@@ -33,6 +34,7 @@ export class OverviewPage {
 
     },
     {
+      accountID: "002729655",
       img: "/assets/img/2.1_3.png",
       region: "Kowloon",
       coins: 2,
@@ -40,6 +42,7 @@ export class OverviewPage {
       percentageChange: 0,
     },
     {
+      accountID: "002729655",
       img: "/assets/img/2.1_4.png",
       region: "New Territories",
       coins: 4.967,

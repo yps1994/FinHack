@@ -85,7 +85,7 @@
         <ion-row> <ion-col align-items-start> 002729655 </ion-col> </ion-row>
         <ion-row>
           <ion-col col-3> Amount </ion-col>
-          <ion-col> <ion-item> <ion-input type="number" placeholder="Amount" type="number" [(ngModel)]="sellPPCValue" required></ion-input> </ion-item> </ion-col>
+          <ion-col> <ion-item> <ion-input type="number" placeholder="Amount" type="number" [(ngModel)]="sellPPCValue" required> </ion-input> </ion-item> </ion-col>
           <ion-col col-3> PPC </ion-col>
         </ion-row>
         <ion-row>
@@ -94,7 +94,7 @@
           <ion-col col-3> HKD </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col text-center> <button ion-button>Sell PPC</button></ion-col>
+          <ion-col text-center> <button ion-button (click)="gotoBuySellConfirmation(balanceData, 'Sell', sellPPCValue, PPCToHKD(sellPPCValue))">Sell PPC</button> </ion-col>
         </ion-row>
       </ion-grid>
     </div>
@@ -115,10 +115,10 @@
       </ion-grid>
 
       <ion-grid>
-        <ion-row style="padding-top: 4px; padding-bottom: 4px; background-color: lightgray">{{transactionData.length}} Transaction History</ion-row>
+        <ion-row style="padding-top: 4px; padding-bottom: 4px; background-color: lightgray">{{countTransaction(transactionData, balanceData.region)}} Transaction History</ion-row>
         <ion-item>
           <div *ngFor="let data of transactionData; let i = index">
-            <div *ngIf="data.region == balanceData.region">
+            <div *ngIf="data.region == balanceData.region;">
               <ion-row>
                 <ion-col> {{data.date}} </ion-col>
                 <ion-col> {{data.type}} </ion-col>
