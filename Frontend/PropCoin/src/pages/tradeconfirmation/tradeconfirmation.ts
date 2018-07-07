@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, MenuController, NavController, Platform } from 'ionic-angular';
+import { IonicPage, MenuController, NavController, NavParams, Platform } from 'ionic-angular';
 import { MainPage } from '../';
+import { BalanceData } from '../Utility';
 
 //Terribly amount of spaghetti code needed to be fixed.
 
@@ -11,32 +12,28 @@ import { MainPage } from '../';
 })
 export class TradeConfirmationPage {
 
-  type: String;
-  tradeAccount: String;
+  balanceData: BalanceData;
   buySellType: String;
-  amount: Number;
-  placePrice: Number;
-  tradeBalance: Number;
-  validityPeriod: String;
+  PPCAmount: Number;
+  HKDAmount: Number;
+  validityPeriod: String = "2018/07/06";
 
-  constructor(public navCtrl: NavController, public menu: MenuController, public platform: Platform) {
-    this.type = "Hong Kong Island";
-    this.tradeAccount = "002729655"
-    this.buySellType = "Buy";
-    this.amount = 1;
-    this.placePrice = 180239;
-    this.tradeBalance = 180239;
-    this.validityPeriod = "2018/07/06";
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menu: MenuController, public platform: Platform) {
+
+    this.balanceData = navParams.get('balanceData');
+    this.buySellType = navParams.get('buySellType');
+    this.PPCAmount = navParams.get('PPCAmount');
+    this.HKDAmount = navParams.get('HKDAmount');
+    
+    console.log(this.balanceData);
+    console.log(this.buySellType);
+    console.log(this.PPCAmount);
+    console.log(this.HKDAmount);
   }
 
-  toTradeConfirmation(type: String, tradeAccount: String, buySellType: String, amount: Number, placePrice: Number, tradeBalance: Number, validityPeriod: String) {
-    this.type = type;
-    this.tradeAccount = tradeAccount;
-    this.buySellType = buySellType;
-    this.amount = amount;
-    this.placePrice = placePrice;
-    this.tradeBalance = tradeBalance;
-    this.validityPeriod = validityPeriod;
+  calculateTradeBalance() {
+    if (this.buySellType == "Buy") return (this.balanceData.balance + this.HKDAmount) ;
+    else return (this.balanceData.balance - this.HKDAmount);
   }
 
   confirm() {

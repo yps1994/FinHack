@@ -85,7 +85,7 @@
         <ion-row> <ion-col align-items-start> 002729655 </ion-col> </ion-row>
         <ion-row>
           <ion-col col-3> Amount </ion-col>
-          <ion-col> <ion-item> <ion-input type="number" placeholder="Amount" type="number" [(ngModel)]="sellPPCValue" required></ion-input> </ion-item> </ion-col>
+          <ion-col> <ion-item> <ion-input type="number" placeholder="Amount" type="number" [(ngModel)]="sellPPCValue" required> </ion-input> </ion-item> </ion-col>
           <ion-col col-3> PPC </ion-col>
         </ion-row>
         <ion-row>
@@ -94,7 +94,7 @@
           <ion-col col-3> HKD </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col text-center> <button ion-button>Sell PPC</button></ion-col>
+          <ion-col text-center> <button ion-button (click)="gotoBuySellConfirmation(balanceData, 'Sell', sellPPCValue, PPCToHKD(sellPPCValue))">Sell PPC</button> </ion-col>
         </ion-row>
       </ion-grid>
     </div>
