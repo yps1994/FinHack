@@ -43,4 +43,72 @@
       </ion-row>
     </ion-grid>
   </ion-card>
+
+  <ion-toolbar no-border>
+    <ion-segment [(ngModel)]="action">
+      <ion-segment-button value="buy">Buy</ion-segment-button>
+      <ion-segment-button value="sell">Sell</ion-segment-button>
+      <ion-segment-button value="transfer">Transfer</ion-segment-button>
+      <ion-segment-button value="history">History</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <div [ngSwitch] = "action" >
+    <div *ngSwitchCase="'buy'">
+      <ion-grid>
+        <ion-row justify-content-between style="margin: 0px; padding: 0px; width: 100%">
+          <ion-col col-9><b>Societe Generale deposit (HKD)</b></ion-col>
+          <ion-col col-3><b>9,700,000</b></ion-col>
+        </ion-row>
+        <ion-row> <ion-col align-items-start> 002729655 </ion-col> </ion-row>
+        <ion-row>
+          <ion-col col-3> Amount </ion-col>
+          <ion-col> <ion-item> <ion-input type="number" placeholder="Amount" type="number" [(ngModel)]="sellPPCValue" required> </ion-input> </ion-item> </ion-col>
+          <ion-col col-3> PPC </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-3> Price </ion-col>
+          <ion-col> <ion-item> <ion-input type="number" placeholder="Price" type="number" value="{{PPCToHKD(sellPPCValue)}}"> </ion-input> </ion-item> </ion-col>
+          <ion-col col-3> HKD </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col text-center> <button ion-button>Buy PPC</button></ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div *ngSwitchCase="'sell'">
+      <ion-grid>
+        <ion-row justify-content-between style="margin: 0px; padding: 0px; width: 100%">
+          <ion-col col-9><b>Societe Generale deposit (HKD)</b></ion-col>
+          <ion-col col-3><b>9,700,000</b></ion-col>
+        </ion-row>
+        <ion-row> <ion-col align-items-start> 002729655 </ion-col> </ion-row>
+        <ion-row>
+          <ion-col col-3> Amount </ion-col>
+          <ion-col> <ion-item> <ion-input type="number" placeholder="Amount" type="number" [(ngModel)]="sellPPCValue" required></ion-input> </ion-item> </ion-col>
+          <ion-col col-3> PPC </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-3> Price </ion-col>
+          <ion-col> <ion-item> <ion-input type="number" placeholder="Price" type="number" value="{{PPCToHKD(sellPPCValue)}}"> </ion-input> </ion-item> </ion-col>
+          <ion-col col-3> HKD </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col text-center> <button ion-button>Sell PPC</button></ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div *ngSwitchCase="'transfer'">
+      <ion-grid>
+        <ion-row>Input Payee Address:</ion-row>
+        <ion-item> <ion-row> <ion-textarea> </ion-textarea> </ion-row> </ion-item>
+        <ion-row> OR </ion-row>
+        <ion-row> Scan QR Code (Click to scanner page) </ion-row>
+      </ion-grid>
+    </div>
+  </div>
 </ion-content>
+
+<ion-footer>
+
+</ion-footer>

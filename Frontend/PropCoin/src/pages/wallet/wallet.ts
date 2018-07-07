@@ -18,6 +18,7 @@ export class WalletPage {
 
   balanceData: BalanceData;
 
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.balanceData = {
       region: "Hong Kong Island",
@@ -30,5 +31,10 @@ export class WalletPage {
     this.balanceData.coins = navParams.get('coins');
     this.balanceData.balance = navParams.get('balance');
     */
+  }
+
+  PPCToHKD(sellHKDValue) {
+    if (isNaN(sellHKDValue)) return 0;
+    return parseFloat(sellHKDValue) * 180239.0;
   }
 }
