@@ -1,11 +1,32 @@
 <ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-yitle>Menu</ion-yitle>
+    </ion-toolbar>
+  </ion-header>
+
   <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+      <ion-list>
+      <button menuClose ion-item (click)="openHomePage()">
+        Home
       </button>
-    </ion-list>
-  </ion-content>
+      <button menuClose ion-item>
+        Setting
+      </button>
+      <button menuClose ion-item>
+        Language
+      </button>
+      <button menuClose ion-item>
+        Transaction History
+      </button>
+      <button menuClose ion-item>
+        Transfer(PPC-to-PPC)
+      </button>
+      <button menuClose ion-item>
+        Exchange(HKD-to-PPC)
+      </button>
+      </ion-list>
+    </ion-content>
 </ion-menu>
 
-<ion-nav #content [root]="rootPage"></ion-nav>
+<ion-nav #content [root]="rootPage" #content></ion-nav>
