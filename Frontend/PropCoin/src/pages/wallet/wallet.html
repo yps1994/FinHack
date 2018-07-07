@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Wallet</ion-title>
+    <ion-title>{{balanceData.region}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -101,10 +101,29 @@
     <div *ngSwitchCase="'transfer'">
       <ion-grid>
         <ion-row>Input Payee Address:</ion-row>
-        <ion-item> <ion-row> <ion-textarea> </ion-textarea> </ion-row> </ion-item>
-        <ion-row> OR </ion-row>
-        <ion-row> Scan QR Code (Click to scanner page) </ion-row>
+        <ion-row> <ion-item> <ion-textarea style="border: 4px"> </ion-textarea> </ion-item> </ion-row>
+        <ion-row style="margin-top: 6px; margin-bottom: 6px"> OR </ion-row>
+        <ion-row style="padding-top: 6px; padding-bottom: 6px"> Scan QR Code (Click to scanner page) </ion-row>
       </ion-grid>
+    </div>
+    <div *ngSwitchCase="'history'">
+        <ion-grid>
+          <ion-row justify-content-between>
+            <ion-col>From 2018/03/03</ion-col>
+            <ion-col>To 2018/07/06</ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-grid>
+          <ion-row style="padding-top: 4px; padding-bottom: 4px; background-color: lightgray">{{transactionData.length}} Transaction History</ion-row>
+          <ion-item>
+            <ion-row *ngFor = "let data of transactionData">
+              <ion-col> {{data.date}} </ion-col>
+              <ion-col> {{data.type}} </ion-col>
+              <ion-col> {{data.amount}} PPC </ion-col>
+            </ion-row>
+          </ion-item>
+        </ion-grid>
     </div>
   </div>
 </ion-content>

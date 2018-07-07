@@ -49,13 +49,12 @@ export class MyApp {
   pages: any[] = [
     { title: 'Landing', component: 'LandingPage' },
     { title: 'Homepage', component: 'HomePage' },
-    { title: 'Tabs', component: 'TabsPage' },
+    { title: 'Overview', component: 'OverviewPage' },
     { title: 'Content', component: 'ContentPage' },
     { title: 'Master Detail', component: 'ListMasterPage' },
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Transfer', component: 'TransferPage' },
-    { title: 'TradeConfirmation', component: 'TradeConfirmationPage' },
-    { title: 'Overview', component: 'OverviewPage' }
+    { title: 'TradeConfirmation', component: 'TradeConfirmationPage' }
   ]
 
   constructor(platform: Platform, settings: Settings, private statusBar: StatusBar, private splashScreen: SplashScreen) {
