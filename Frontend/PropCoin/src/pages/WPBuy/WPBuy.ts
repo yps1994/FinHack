@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, AlertController } from 'ionic-angular';
 
 
 @IonicPage()
@@ -9,6 +9,18 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class WPBuyPage {
 
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController) { }
 
+
+  presentAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Your Private QR code',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
+
+  popQRcodeimg(){
+    
+  }
 }

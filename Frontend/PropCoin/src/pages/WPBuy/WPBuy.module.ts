@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
 import { IonicPageModule } from 'ionic-angular';
 
 import { WPBuyPage } from './WPBuy';
@@ -10,7 +9,6 @@ import { WPBuyPage } from './WPBuy';
   ],
   imports: [
     IonicPageModule.forChild(WPBuyPage),
-    TranslateModule.forChild()
   ],
   exports: [
     WPBuyPage
