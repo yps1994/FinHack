@@ -38,6 +38,10 @@ export class WalletPage {
     alert.present();
   }
 
+  countTransaction(transactionData, region) {
+    return transactionData.filter(x => x.region == region).length;
+  }
+
   gotoBuySellConfirmation(tempBalanceData, tempBuySellType, tempPPCAmount, tempHKDAmount) {
 
     if (tempBuySellType == "Buy" && tempHKDAmount > tempBalanceData.balance) {
