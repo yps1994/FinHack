@@ -47,16 +47,12 @@ export class MyApp {
   pages: any[] = [
     { title: 'Landing', component: 'LandingPage' },
     { title: 'Homepage', component: 'HomePage' },
-    { title: 'Welcome', component: 'WelcomePage' },
     { title: 'Tabs', component: 'TabsPage' },
-    { title: 'Cards', component: 'CardsPage' },
     { title: 'Content', component: 'ContentPage' },
-    { title: 'Login', component: 'LoginPage' },
-    { title: 'Signup', component: 'SignupPage' },
     { title: 'Master Detail', component: 'ListMasterPage' },
     { title: 'Menu', component: 'MenuPage' },
-    { title: 'Settings', component: 'SettingsPage' },
-    { title: 'Transfer', component: 'TransferPage' }
+    { title: 'Transfer', component: 'TransferPage' },
+    { title: 'TradeConfirmation', component: 'TradeConfirmationPage' }
   ]
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
