@@ -1,4 +1,10 @@
 page-homepage {
+
+    @import url(https://fonts.google.com/specimen/Roboto);
+    $font-family-base: "Light", sans-serif !default;
+
+
+
     .card-title {
         position: relative;
         text-align: center;
@@ -8,26 +14,66 @@ page-homepage {
         font-size: 6 px;
     }
 
-    .propcoin-icon {
+    .trans{
+        background-color :transparent;
+        color : white;
+    }
+
+    .transinput{
+        background-color :transparent;
+        color: rgba(255, 255, 255, 0.938);
+    }
+
+    .text-input::-webkit-input-placeholder {
+        color: white;
+      }
+      
+    .LEGOcoin-icon {
         //margin-left: auto;
         //margin-right: auto;
-        width: 50%;
+        //width: 50%;
+        //size : 10%;
         align-items: center;
+        background-color :transparent;
     }
 
     .grid-color {
-        background: lightgray;
+        background-color: transparent;
         border: think solid black;
+        color: white;
     }
 
     .grid-separator {
         margin: 1%;
     }
 
+    #buttonword{
+        color: rgba(255, 2, 78, 0.753);
+    }
+
+    .custom-icon {
+        //font-size: 64px;
+        color : white;
+    }
+    .placeholder-text{
+            color: white;
+    }
+
+    ion-content {
+        background-image: url('/assets/img/1.1.png') ;
+        background-size: cover;
+    }
+
     ion-row {
         height: 100%;
         justify-content: center;
         align-items: center;
+    }
+
+    ::-webkit-scrollbar,
+    *::-webkit-scrollbar
+    {
+        display:none;
     }
 }
 
