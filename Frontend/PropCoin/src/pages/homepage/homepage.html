@@ -15,7 +15,7 @@
   <ion-grid>
     <ion-row class="grid-color grid-separator" *ngFor = "let data of regionalDataTrend">
       <ion-col> {{data.region}} </ion-col>
-      <ion-col> {{data.index}} </ion-col>
+      <ion-col> <img src="{{loadArrowFromIndex(data.upDownArrowIndex)}}"> {{data.index}} </ion-col>
       <ion-col> {{data.percentageChange}} </ion-col>
     </ion-row>
   </ion-grid>

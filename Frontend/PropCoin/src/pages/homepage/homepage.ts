@@ -29,7 +29,7 @@ export class HomePage {
       {
         region: "Kowloon",
         upDownArrowIndex: 0,
-        index: 180239,
+        index: 151856,
         percentageChange: 0,
       },
       {
@@ -39,6 +39,17 @@ export class HomePage {
         percentageChange: -10.31,
       }
     ]
+  }
+
+  loadArrowFromIndex(index: number) {
+    if (index >= 1.0) {
+      return "assets/imgs/upward-arrow.png";
+    }
+    else if (index <= -1.0) {
+      return "assets/imgs/downward-arrow.png";
+    }
+
+    return "assets/imgs/no-change.png";
   }
 
   doLogin() {
