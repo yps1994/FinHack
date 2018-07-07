@@ -32,10 +32,10 @@ import { Settings } from '../providers';
         Transaction History
       </button>
       <button menuClose ion-item>
-        Transfer(PPC-to-PPC)
+        Transfer(LOG-to-LOG)
       </button>
       <button menuClose ion-item>
-        Exchange(HKD-to-PPC)
+        Exchange(HKD-to-LOG)
       </button>
     </ion-list>
     </ion-content>

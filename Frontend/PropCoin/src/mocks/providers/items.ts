@@ -7,7 +7,7 @@ export class Items {
   items: Item[] = [];
 
   defaultItem: any = {
-    "coinname": "PPC-HA",
+    "coinname": "LOG-HA",
     "profilePic": "assets/img/speakers/bear.jpg",
     "desc": "Domestic Type A - Hong Kong."
   };
@@ -16,63 +16,63 @@ export class Items {
   constructor() {
     let items = [
       {
-        "coinname": "PPC-HA",
+        "coinname": "LOG-HA",
         "profilePic": "assets/img/speakers/bear.jpg",
         "desc": "Domestic Type A - Hong Kong.",
         "xchgttl": "10",
         "onhandttl":"10"
       },
       {
-        "coinname": "PPC-HB",
+        "coinname": "LOG-HB",
         "profilePic": "assets/img/speakers/cheetah.jpg",
         "desc": "Domestic Type B - Hong Kong.",
         "xchgttl": "10",
         "onhandttl":"10"
       },
       {
-        "coinname": "PPC-HC",
+        "coinname": "LOG-HC",
         "profilePic": "assets/img/speakers/duck.jpg",
         "desc": "Domestic Type C - Hong Kong.",
         "xchgttl": "10",
         "onhandttl":"10"
       },
       {
-        "coinname": "PPC-KA",
+        "coinname": "LOG-KA",
         "profilePic": "assets/img/speakers/eagle.jpg",
         "desc": "Domestic Type A - Kowloon.",
         "xchgttl": "10",
         "onhandttl": "10"
       },
       {
-        "coinname": "PPC-KB",
+        "coinname": "LOG-KB",
         "profilePic": "assets/img/speakers/elephant.jpg",
         "desc": "Domestic Type B - Kowloon.",
         "xchgttl": "10",
         "onhandttl": "10"
       },
       {
-        "coinname": "PPC-KC",
+        "coinname": "LOG-KC",
         "profilePic": "assets/img/speakers/mouse.jpg",
         "desc": "Domestic Type C - Kowloon.",
         "xchgttl": "10",
         "onhandttl": "10"
       },
       {
-        "coinname": "PPC-NA",
+        "coinname": "LOG-NA",
         "profilePic": "assets/img/speakers/puppy.jpg",
         "desc": "Domestic Type A - New Terrerties.",
         "xchgttl": "10",
         "onhandttl": "10"
       },
       {
-        "coinname": "PPC-NB",
+        "coinname": "LOG-NB",
         "profilePic": "assets/img/speakers/puppy.jpg",
         "desc": "Domestic Type B - New Terrerties.",
         "xchgttl": "10",
         "onhandttl":"10"
       },
       {
-        "coinname": "PPC-NC",
+        "coinname": "LOG-NC",
         "profilePic": "assets/img/speakers/puppy.jpg",
         "desc": "Domestic Type C - New Terrerties.",
         "xchgttl": "10",

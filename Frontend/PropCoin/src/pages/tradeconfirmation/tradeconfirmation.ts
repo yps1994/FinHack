@@ -14,7 +14,7 @@ export class TradeConfirmationPage {
 
   balanceData: BalanceData;
   buySellType: String;
-  PPCAmount: Number;
+  LOGAmount: Number;
   HKDAmount: Number;
   validityPeriod: String = "2018/07/06";
 
@@ -22,12 +22,12 @@ export class TradeConfirmationPage {
 
     this.balanceData = navParams.get('balanceData');
     this.buySellType = navParams.get('buySellType');
-    this.PPCAmount = navParams.get('PPCAmount');
+    this.LOGAmount = navParams.get('LOGAmount');
     this.HKDAmount = navParams.get('HKDAmount');
     
     console.log(this.balanceData);
     console.log(this.buySellType);
-    console.log(this.PPCAmount);
+    console.log(this.LOGAmount);
     console.log(this.HKDAmount);
   }
 
