@@ -20,6 +20,7 @@ export class HomePage {
   createWallet() {
     this.gotoMainPage();
   }
+  
   gotoMainPage() {
     this.navCtrl.push(MainPage);
   }
