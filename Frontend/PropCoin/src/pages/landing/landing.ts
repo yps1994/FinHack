@@ -13,7 +13,7 @@ export class LandingPage {
   }
 
   gotoWallet() {
-    this.navCtrl.setRoot('WelcomePage', {}, {
+    this.navCtrl.setRoot('HomePage', {}, {
       animate: true,
       direction: 'forward'
     });

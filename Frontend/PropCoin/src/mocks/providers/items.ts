@@ -7,48 +7,76 @@ export class Items {
   items: Item[] = [];
 
   defaultItem: any = {
-    "name": "Burt Bear",
+    "coinname": "PPC-HA",
     "profilePic": "assets/img/speakers/bear.jpg",
-    "about": "Burt is a Bear.",
+    "desc": "Domestic Type A - Hong Kong."
   };
 
 
   constructor() {
     let items = [
       {
-        "name": "Burt Bear",
+        "coinname": "PPC-HA",
         "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt is a Bear."
+        "desc": "Domestic Type A - Hong Kong.",
+        "xchgttl": "10",
+        "onhandttl":"10"
       },
       {
-        "name": "Charlie Cheetah",
+        "coinname": "PPC-HB",
         "profilePic": "assets/img/speakers/cheetah.jpg",
-        "about": "Charlie is a Cheetah."
+        "desc": "Domestic Type B - Hong Kong.",
+        "xchgttl": "10",
+        "onhandttl":"10"
       },
       {
-        "name": "Donald Duck",
+        "coinname": "PPC-HC",
         "profilePic": "assets/img/speakers/duck.jpg",
-        "about": "Donald is a Duck."
+        "desc": "Domestic Type C - Hong Kong.",
+        "xchgttl": "10",
+        "onhandttl":"10"
       },
       {
-        "name": "Eva Eagle",
+        "coinname": "PPC-KA",
         "profilePic": "assets/img/speakers/eagle.jpg",
-        "about": "Eva is an Eagle."
+        "desc": "Domestic Type A - Kowloon.",
+        "xchgttl": "10",
+        "onhandttl": "10"
       },
       {
-        "name": "Ellie Elephant",
+        "coinname": "PPC-KB",
         "profilePic": "assets/img/speakers/elephant.jpg",
-        "about": "Ellie is an Elephant."
+        "desc": "Domestic Type B - Kowloon.",
+        "xchgttl": "10",
+        "onhandttl": "10"
       },
       {
-        "name": "Molly Mouse",
+        "coinname": "PPC-KC",
         "profilePic": "assets/img/speakers/mouse.jpg",
-        "about": "Molly is a Mouse."
+        "desc": "Domestic Type C - Kowloon.",
+        "xchgttl": "10",
+        "onhandttl": "10"
       },
       {
-        "name": "Paul Puppy",
+        "coinname": "PPC-NA",
         "profilePic": "assets/img/speakers/puppy.jpg",
-        "about": "Paul is a Puppy."
+        "desc": "Domestic Type A - New Terrerties.",
+        "xchgttl": "10",
+        "onhandttl": "10"
+      },
+      {
+        "coinname": "PPC-NB",
+        "profilePic": "assets/img/speakers/puppy.jpg",
+        "desc": "Domestic Type B - New Terrerties.",
+        "xchgttl": "10",
+        "onhandttl":"10"
+      },
+      {
+        "coinname": "PPC-NC",
+        "profilePic": "assets/img/speakers/puppy.jpg",
+        "desc": "Domestic Type C - New Terrerties.",
+        "xchgttl": "10",
+        "onhandttl":"10"
       }
     ];
 

@@ -1,0 +1,84 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Overview</ion-title>
+  </ion-navbar>
+  
+</ion-header>
+
+<ion-content padding>
+  <h6>Hi {{user}},<br/></h6>
+
+  <div text-center>
+      Your total Balance(HKD)<br/>
+      <h2><b>$ {{balance}}</b></h2>
+  </div>
+
+  <ion-grid text-center>
+      <ion-row  id="header">
+          <ion-col>PPC Type</ion-col>
+          <ion-col>PPC</ion-col>
+          <ion-col>Balance</ion-col>
+      </ion-row>
+
+      <ion-row text-center class="grid-style-1">
+          <ion-col>HK Island</ion-col>
+          <ion-col>5.006</ion-col>
+          <ion-col>HKD 901,195 +15.6%</ion-col>
+      </ion-row>
+      <br/>
+      
+      <ion-row text-center class="grid-style-1">
+          <ion-col>Kowloon</ion-col>
+          <ion-col>2</ion-col>
+          <ion-col>HKD 303,712</ion-col>
+      </ion-row>
+      <br/>
+
+      <ion-row text-center class="grid-style-1">
+          <ion-col>New Territories</ion-col>
+          <ion-col>1</ion-col>
+          <ion-col>HKD 141,6 59 -10.31%</ion-col>
+      </ion-row>
+
+      <br/>
+  </ion-grid>
+
+
+  <ion-row>
+    <ion-col no-padding  style="background-color: lightgray">
+        <p>Recent Transcation</p>
+
+    </ion-col>
+  </ion-row>
+
+  <ion-list no-lines>
+      <ion-item>
+        <ion-col>7/4</ion-col>
+        <ion-col>Buy</ion-col>
+        <ion-col>1PPC</ion-col>
+      </ion-item>
+      
+      <ion-item>
+        <ion-col>7/3</ion-col>
+        <ion-col>Buy</ion-col>
+        <ion-col>1PPC</ion-col>    
+      </ion-item>
+      
+      <ion-item>
+          <ion-col>7/3</ion-col>
+          <ion-col>Withdraw</ion-col>
+          <ion-col>1PPC</ion-col>   
+        </ion-item>
+      
+      <ion-item>
+        <ion-col>7/2</ion-col>
+        <ion-col>Buy</ion-col>
+        <ion-col></ion-col>
+        <ion-col>1PPC</ion-col>   
+      </ion-item>
+
+  </ion-list>
+
+
+</ion-content>

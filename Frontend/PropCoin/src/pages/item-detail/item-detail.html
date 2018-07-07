@@ -1,18 +1,25 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ item.name }}</ion-title>
+    <ion-title>{{ item.coinname }} Details</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
-  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  <!-- <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  </div> -->
+
+  <div class="coin-onhand" padding>
+    <h2>{{item.coinname}}</h2>
+    {{item.desc}}
+    <br>
+    <p>Coin On Hand:
+       {{item.onhandttl}}</p>
+       <p>Coin Exchange:
+        {{item.xchgttl}}</p>
+        <button ion-button full (click)="gotoTrade()" >Trade</button>
   </div>
 
-  <div class="item-detail" padding>
-    <h2>{{item.name}}</h2>
-    <p>{{item.about}}</p>
-  </div>
 </ion-content>
