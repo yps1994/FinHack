@@ -7,12 +7,11 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-list>
         <ion-item id="propcoinicon">
             <img src="assets/img/propcoin.jpg">
-          <h1><strong>PropCoin</strong></h1>
+            <h1 id="iconname"><strong>PropCoin</strong></h1>
         </ion-item>
-      </ion-list>
+        
 
     <ion-grid class="gridcolor">     
         <ion-row>
@@ -73,6 +72,7 @@
     <ion-buttons start>
         <button class="smallbutton" ion-button (click)="createWallet()" color="dark" clear> Don't have an account? </button>
         <button class="smallbutton" ion-button color="dark" clear> Forget password </button>
+        <button class="smallbutton" ion-button (click)="testing()"color="dark" clear> Testing </button>
     </ion-buttons>
     
 </ion-content>

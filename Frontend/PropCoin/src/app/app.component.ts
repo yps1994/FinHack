@@ -51,7 +51,7 @@ export class MyApp {
     { title: 'Master Detail', component: 'ListMasterPage' },
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Transfer', component: 'TransferPage' },
-    { title: 'TradeConfirmation', component: 'TradeConfirmationPage' }
+    { title: 'WPBuy', component: 'WPBuyPage' }
   ]
 
   constructor(platform: Platform, settings: Settings, private statusBar: StatusBar, private splashScreen: SplashScreen) {
