@@ -10,7 +10,7 @@ import { Settings } from '../providers';
   template: `<ion-menu [content]="content">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Pages</ion-title>
+        <ion-title>Menus</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -18,10 +18,10 @@ import { Settings } from '../providers';
       <button menuClose ion-item>
         Logout
       </button>
-      <button menuClose ion-item (click)="openHomePage()">
+      <button menuClose ion-item>
         Setting
       </button>
-      <button menuClose ion-item (click)="openOverview()">
+      <button menuClose ion-item>
         Overview
       </button>
       <button menuClose ion-item>
