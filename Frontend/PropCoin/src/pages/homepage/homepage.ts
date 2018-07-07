@@ -2,6 +2,13 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import { MainPage } from '../';
 
+export interface RegionalDataTrend {
+  region: string;
+  upDownArrowIndex: number;
+  index: number;
+  percentageChange: number;
+}
+
 @IonicPage()
 @Component({
   selector: 'page-homepage',
@@ -9,8 +16,29 @@ import { MainPage } from '../';
 })
 export class HomePage {
 
+  regionalDataTrend: RegionalDataTrend[];
+
   constructor(public navCtrl: NavController) {
-    
+    this.regionalDataTrend = [
+      {
+        region: "Hong Kong Island",
+        upDownArrowIndex: 1,
+        index: 180239,
+        percentageChange: 15.6,
+      },
+      {
+        region: "Kowloon",
+        upDownArrowIndex: 0,
+        index: 180239,
+        percentageChange: 0,
+      },
+      {
+        region: "New Terrotories",
+        upDownArrowIndex: -1,
+        index: 141659,
+        percentageChange: -10.31,
+      }
+    ]
   }
 
   doLogin() {
@@ -20,6 +48,7 @@ export class HomePage {
   createWallet() {
     this.gotoMainPage();
   }
+  
   gotoMainPage() {
     this.navCtrl.push(MainPage);
   }
