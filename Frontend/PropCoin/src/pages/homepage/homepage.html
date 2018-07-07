@@ -11,9 +11,8 @@
 <ion-content padding>
   <ion-list no-lines>
     <ion-item  text-center class="LEGOcoin-icon"> <img ion-img width="80" height="60" src="/assets/img/LOGEcoinicon.png"> </ion-item>
-    <ion-item text-center class="trans"> <h1> <b>LOGECoin Wallet</b> </h1> </ion-item>
-    <ion-item text-center class="trans"> <p ion-text color="light"> A coin-based tradable asset<br>
-    tracking the house </p> </ion-item>
+    <ion-item text-center class="trans"> <h1> <b>LOGE Wallet</b> </h1> </ion-item>
+    <ion-item text-center class="trans"> <h6><p ion-text color="light">RISE ALONE YOUR HOUSE</h6></ion-item>
   </ion-list>
 
   <ion-grid>
@@ -40,11 +39,11 @@
     <ion-row>
       
       <ion-col>
-          <button class="smallbutton" ion-button (click)="createWallet()" color="light" clear small> No Account yet </button>
+          <button class="smallbutton" ion-button (click)="presentAlertCreateAcc()" color="light" clear small> No Account yet </button>
       </ion-col>
 
       <ion-col>
-          <button class="smallbutton" ion-button (click)="presentAlert()" color="light" clear small> Forget password </button>
+          <button class="smallbutton" ion-button (click)="presentAlertFogetPassword()" color="light" clear small> Forget password </button>
       </ion-col>
 
     </ion-row>

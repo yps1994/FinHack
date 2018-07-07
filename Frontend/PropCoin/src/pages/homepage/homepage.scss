@@ -17,6 +17,8 @@ page-homepage {
     .trans{
         background-color :transparent;
         color : white;
+        margin-bottom: -20px;
+        font-size: 7px;
     }
 
     .transinput{
@@ -44,7 +46,8 @@ page-homepage {
     }
 
     .grid-separator {
-        margin: 1%;
+        margin: 2px;
+        margin-bottom: 15px;
     }
 
     #buttonword{

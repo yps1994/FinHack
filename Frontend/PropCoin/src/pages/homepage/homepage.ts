@@ -64,7 +64,31 @@ export class HomePage {
     this.navCtrl.push(MainPage);
   }
 
-  presentAlert() {
+  presentAlertCreateAcc() {
+    let alert = this.alertCtrl.create({
+      title: 'Registration',
+      inputs: [
+        {
+          name:'email',
+          placeholder: 'Email'
+        }
+        ,{
+          name:'password',
+          placeholder: 'Password',
+          type:'password'
+        }
+        ,{
+          name:'reenterpassword',
+          placeholder: 'Please Re-enter Password',
+          type:'password'
+        }
+      ],
+      buttons: ['ENTER']
+    });
+    alert.present();
+  }
+
+  presentAlertFogetPassword() {
     let alert = this.alertCtrl.create({
       title: 'Please Enter Your <br>Registration Email',
       inputs: [

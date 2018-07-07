@@ -9,7 +9,7 @@
           </ion-buttons>
       </ion-col>
 
-      <ion-col>
+      <ion-col col-7>
           <h6 align="right" class="whitetext">Hi {{user}}! </h6>
       </ion-col>
 
@@ -40,7 +40,7 @@
   <ion-list>
     <button detail-none class="grid-style-1" ion-item *ngFor="let data of balanceData" (click)="gotoCorrespondingWallet(data, transactionData)">
     <!-- <button detail-none class="grid-style-1" ion-item *ngFor="let data of balanceData"> -->
-      <!-- <ion-col>{{data.region}}</ion-col> --><ion-row >
+      <!-- <ion-col>{{data.region}}</ion-col> --><ion-row class="margin-fixing">
       <ion-col><ion-avatar item-start> <img src={{data.img}}></ion-avatar></ion-col>
       <ion-col text-center>{{data.coins | number:'1.3-3'}}</ion-col>
       <ion-col>
@@ -70,13 +70,13 @@
 
   <ion-grid class="grid-graycolor" text-center>
       <ion-row id="header">
-        <ion-col text-start>DATE</ion-col>
-        <ion-col>DETAIL</ion-col>
-        <ion-col>BALANCE</ion-col>
+        <ion-col col-4 text-center>DATE</ion-col>
+        <ion-col col-4 text-start>DETAIL</ion-col>
+        <ion-col col-4>BALANCE</ion-col>
       </ion-row>
   </ion-grid>
   <ion-grid>
-    <ion-row style="padding-top: 4px; padding-bottom: 4px; background-color: lightgray">{{transactionData.length}} Transaction History</ion-row>
+    <ion-row style="padding-top: 4px; padding-bottom: 4px; background-color: lightgray"> Transactions</ion-row>
 
       <div *ngFor="let data of transactionData; let i = index">
         <div *ngIf="i<4">

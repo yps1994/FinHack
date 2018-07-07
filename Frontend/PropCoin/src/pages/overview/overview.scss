@@ -1,10 +1,10 @@
 .grid-style-1 { 
-    background: transparent; 
+    background-color: transparent; 
     border: think solid black;
-    height: 100%; 
+    padding: 0px;
     justify-content: center; 
     align-items: center; 
-    padding: 0;
+    margin-top: -3px;
     } 
 
 .hidden-button{
@@ -15,6 +15,16 @@
     font-size:0;
     box-shadow: none;
     -webkit-box-shadow: none;
+}
+
+// .transparent-background {
+//     background: transparent;
+// }
+
+.margin-fixing{
+    margin-top: -10px;
+    margin-bottom: -10px;
+    background: transparent;
 }
 
 .menu-style{
@@ -28,6 +38,7 @@ ion-header::after{
 
 .whitetext{
     color:white;
+    margin-right: 9px;
 }
 
 .orangetext{
