@@ -15,11 +15,14 @@ import { Settings } from '../providers';
     </ion-header>
 
     <ion-list>
-      <button menuClose ion-item (click)="openHomePage()">
+      <button menuClose ion-item>
         Logout
       </button>
-      <button menuClose ion-item>
+      <button menuClose ion-item (click)="openHomePage()">
         Setting
+      </button>
+      <button menuClose ion-item (click)="openOverview()">
+        Overview
       </button>
       <button menuClose ion-item>
         Language
@@ -52,6 +55,7 @@ export class MyApp {
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Transfer', component: 'TransferPage' },
     { title: 'TradeConfirmation', component: 'TradeConfirmationPage' }
+    { title: 'Overview', component: 'OverviewPage' }
   ]
 
   constructor(platform: Platform, settings: Settings, private statusBar: StatusBar, private splashScreen: SplashScreen) {
@@ -72,5 +76,9 @@ export class MyApp {
   
   openHomePage(){
     this.nav.push('HomePage');
+  }
+
+  openOverview(){
+    this.nav.push('Overview');
   }
 }
