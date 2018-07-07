@@ -15,13 +15,26 @@ import { Settings } from '../providers';
       </ion-toolbar>
     </ion-header>
 
-    <ion-content>
-      <ion-list>
-        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-          {{p.title}}
-        </button>
-      </ion-list>
-    </ion-content>
+    <ion-list>
+      <button menuClose ion-item (click)="openHomePage()">
+        Logout
+      </button>
+      <button menuClose ion-item>
+        Setting
+      </button>
+      <button menuClose ion-item>
+        Language
+      </button>
+      <button menuClose ion-item>
+        Transaction History
+      </button>
+      <button menuClose ion-item>
+        Transfer(PPC-to-PPC)
+      </button>
+      <button menuClose ion-item>
+        Exchange(HKD-to-PPC)
+      </button>
+    </ion-list>
 
   </ion-menu>
   <ion-nav #content [root]="rootPage"></ion-nav>`
@@ -86,5 +99,9 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+  
+  openHomePage(){
+    this.nav.push('HomePage');
   }
 }
