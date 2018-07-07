@@ -41,28 +41,28 @@ export class Items {
         "profilePic": "assets/img/speakers/eagle.jpg",
         "desc": "Domestic Type A - Kowloon.",
         "xchgttl": "10",
-        "onhandttl":"10"
+        "onhandttl": "10"
       },
       {
         "coinname": "PPC-KB",
         "profilePic": "assets/img/speakers/elephant.jpg",
         "desc": "Domestic Type B - Kowloon.",
         "xchgttl": "10",
-        "onhandttl":"10"
+        "onhandttl": "10"
       },
       {
         "coinname": "PPC-KC",
         "profilePic": "assets/img/speakers/mouse.jpg",
         "desc": "Domestic Type C - Kowloon.",
         "xchgttl": "10",
-        "onhandttl":"10"
+        "onhandttl": "10"
       },
       {
         "coinname": "PPC-NA",
         "profilePic": "assets/img/speakers/puppy.jpg",
         "desc": "Domestic Type A - New Terrerties.",
         "xchgttl": "10",
-        "onhandttl":"10"
+        "onhandttl": "10"
       },
       {
         "coinname": "PPC-NB",
