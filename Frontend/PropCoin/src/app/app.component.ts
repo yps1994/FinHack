@@ -54,7 +54,7 @@ export class MyApp {
     { title: 'Master Detail', component: 'ListMasterPage' },
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Transfer', component: 'TransferPage' },
-    { title: 'TradeConfirmation', component: 'TradeConfirmationPage' }
+    { title: 'TradeConfirmation', component: 'TradeConfirmationPage' },
     { title: 'Overview', component: 'OverviewPage' }
   ]
 
