@@ -9,4 +9,4 @@ export const MainPage = 'TabsPage';
 export const Tab1Root = 'ListMasterPage';
 export const Tab2Root = 'TransferPage';
 export const Tab3Root = 'SettingsPage';
-export const Tab4Root = 'SettingsPage'; //Need to be changed
+export const Tab4Root = 'TradeConfirmationPage'; //Need to be changed
