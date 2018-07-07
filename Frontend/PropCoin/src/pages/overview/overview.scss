@@ -6,7 +6,12 @@
     align-items: center; 
 } 
 
-
-// ion-row { 
-// } 
-
+.hidden-button{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none !important;
+    font-size:0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
