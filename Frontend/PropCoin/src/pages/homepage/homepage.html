@@ -7,28 +7,72 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
-    <ion-card-header class="card-title">
-      <b>Open Wallet</b>
-    </ion-card-header>
+    <ion-list>
+        <ion-item id="propcoinicon">
+            <img src="assets/img/propcoin.jpg">
+          <h1><strong>PropCoin</strong></h1>
+        </ion-item>
+      </ion-list>
+
+    <ion-grid class="gridcolor">     
+        <ion-row>
+            <ion-col>
+              data1
+            </ion-col>
+            <ion-col>
+              data2
+            </ion-col>
+            <ion-col>
+              data3
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid ></ion-grid>
+
+    <ion-grid class="gridcolor">     
+        <ion-row>
+            <ion-col>
+              data1
+            </ion-col>
+            <ion-col>
+              data2
+            </ion-col>
+            <ion-col>
+              data3
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid ></ion-grid>
+
+    <ion-grid class="gridcolor">     
+        <ion-row>
+            <ion-col>
+              data1
+            </ion-col>
+            <ion-col>
+              data2
+            </ion-col>
+            <ion-col>
+              data3
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid ></ion-grid>
 
     <ion-list>
-      <ion-item>
-        <ion-input placeholder="Private Key" type="password" value=""></ion-input>
-      </ion-item>
-    </ion-list>
+        <ion-item>
+          <ion-input placeholder="Email" type="text" value=""></ion-input>
+        </ion-item>
 
-    <ion-buttons end>
-      <button ion-button (click)="doLogin()"> Go </button>
+        <ion-item>
+            <ion-input placeholder="Password" type="password" value=""></ion-input>
+          </ion-item>
+      </ion-list>
+
+    <button ion-button block (click)="doLogin()" color="light"> Log in </button>
+    <ion-buttons start>
+        <button class="smallbutton" ion-button (click)="createWallet()" color="dark" clear> Don't have an account? </button>
+        <button class="smallbutton" ion-button color="dark" clear> Forget password </button>
     </ion-buttons>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header class="card-title">
-      <b>New Wallet</b>
-    </ion-card-header>
-
-    <button ion-button block (click)="createWallet()"> Create </button>
-
-  </ion-card>
+    
 </ion-content>
