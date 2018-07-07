@@ -6,7 +6,8 @@ import { IonicPage, NavController } from 'ionic-angular';
   selector: 'page-overview',
   templateUrl: 'overview.html'
 })
-export class Overview {
+
+export class OverviewPage {
 
   user: String = "";
   balance: String = "";
