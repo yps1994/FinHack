@@ -14,18 +14,22 @@
 </ion-header>
 
 <ion-content>
-<h1> Hi Customer,</h1>
+
 <ion-grid>
+<ion-row>
+  <h1 padding> Hi Customer,</h1>
+</ion-row> 
+<h2>
   <ion-row>
     <ion-col>
-      <div><B>Total Cash (HKD): </B>999,999.99</div>
+      <div>Total Cash (HKD): 999,999.99</div>
     </ion-col>
     <ion-col>
-      <div><B>Total Balance (PPC):</B> 999,999.99</div>
+      <div>Total Coin Value (HKD): 999,999.99</div>
     </ion-col>
   </ion-row>
+</h2>
 </ion-grid>
-<br>
 
 <ion-list>
     <ion-item-sliding *ngFor="let item of currentItems">
@@ -35,7 +39,17 @@
         </ion-avatar>-->
         <h2>{{item.coinname}}</h2>
         <p>{{item.desc}}</p>
-        <p>On hand:{{item.onhandttl | number }} Exchange:{{item.xchgttl | number }} </p>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div><ion-icon name="hand"></ion-icon> {{item.onhandttl}}</div>
+            </ion-col>
+            <ion-col>
+              <div><ion-icon name="swap"></ion-icon> {{item.xchgttl}}</div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        
         <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
       </button>
 
