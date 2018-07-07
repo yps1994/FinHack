@@ -3,6 +3,7 @@ export interface BalanceData {
   coins: number;
   balance: number;
   percentageChange: number;
+  img: string;
 }
 
 export interface TransactionData {

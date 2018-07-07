@@ -22,70 +22,76 @@ export class OverviewPage {
     this.user = this.fetchUserName();
     this.balance = this.fetchUserBalance();
 
+
     this.balanceData = [{
+      img: "/assets/img/2.1_2.png",
       region: "HK Island",
       coins: 5.006,
       balance: 901195,
       percentageChange: 15.6,
+
+
     },
     {
+      img: "/assets/img/2.1_3.png",
       region: "Kowloon",
       coins: 2,
       balance: 303712,
       percentageChange: 0,
     },
     {
+      img: "/assets/img/2.1_4.png",
       region: "New Territories",
-      coins: 1,
+      coins: 4.967,
       balance: 141659,
       percentageChange: -10.31,
     }];
 
     this.transactionData = [
     {
-      date: "4/7",
+      date: "04/07",
       type: "Buy",
       amount: 1,
       region: "HK Island",
     },
     {
-      date: "3/7",
+      date: "03/07",
       type: "Buy",
       amount: 1,
       region: "Kowloon",
     },
     {
-      date: "3/7",
+      date: "03/07",
       type: "Withdraw",
       amount: 1,
       region: "New Territories",
     },
     {
-      date: "2/7",
+      date: "02/07",
       type: "Buy",
       amount: 1,
       region: "New Territories",
     },
     {
-      date: "4/6",
+      date: "04/06",
       type: "Buy",
       amount: 1,
       region: "HK Island",
     },
     {
-      date: "3/5",
+      date: "03/05",
       type: "Buy",
       amount: 1,
       region: "HK Island",
     },
     {
-      date: "7/4",
+      date: "07/04",
       type: "Withdraw",
       amount: 1,
       region: "HK Island",
     },
     {
-      date: "2/4",
+      date: "02/04",
       type: "Interest",
       amount: 0.01,
       region: "HK Island",
@@ -93,7 +99,7 @@ export class OverviewPage {
   }
 
   fetchUserName() {
-    return "Steven";
+    return "Gram";
   }
 
   fetchUserBalance(){

@@ -1,10 +1,11 @@
 .grid-style-1 { 
-    background: lightgray; 
+    background: transparent; 
     border: think solid black;
     height: 100%; 
     justify-content: center; 
     align-items: center; 
-} 
+    padding: 0;
+    } 
 
 .hidden-button{
     height: 100%;
@@ -15,3 +16,61 @@
     box-shadow: none;
     -webkit-box-shadow: none;
 }
+
+.menu-style{
+    background-color: transparent;
+    color: white;
+}
+
+ion-header::after{
+    background-image: none;
+}
+
+.whitetext{
+    color:white;
+}
+
+.orangetext{
+    color:rgb(255, 102, 0);
+}
+
+.greentext{
+    color : green;
+    font-size : 13px;
+    align-items: end;
+}
+
+.redtext{
+    color : red;
+    font-size : 13px;
+    align-items: end;
+
+}
+
+.grid-graycolor {
+    background-color: transparent;
+    border: think solid black;
+    color: gray;
+}
+
+.list-color01{
+    background-color: white;
+    color: black;
+}
+
+ion-content {
+    background-image: url('/assets/img/2.0_1.png') ;
+    background-size: cover;
+}
+
+ion-row {
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-scrollbar,
+    *::-webkit-scrollbar
+    {
+        display:none;
+    }
