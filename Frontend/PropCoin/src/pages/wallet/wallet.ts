@@ -10,22 +10,17 @@ import { BalanceData, TransactionData } from '../Utility';
 
 export class WalletPage {
 
-  region: string;
+  action = "buy";
 
   balanceData: BalanceData;
- 
-  numTransactionProcessed: number;
   transactionData: TransactionData[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
-    this.balanceData.region = navParams.get('region');
-    this.balanceData.coins = navParams.get('coins');
-    this.balanceData.balance = navParams.get('balance');
+    this.balanceData = navParams.get('balanceData');
+    this.transactionData = navParams.get('transactionData');
 
   }
-
-
 
   PPCToHKD(sellHKDValue) {
     if (isNaN(sellHKDValue)) return 0;

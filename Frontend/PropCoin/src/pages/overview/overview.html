@@ -26,8 +26,7 @@
   </ion-grid>
 
   <ion-list>
-    <!-- <button class="grid-style-1" ion-item *ngFor="let data of balanceData" (click)="gotoCorrespondingWallet(data.region, transactionData)"> -->
-    <button class="grid-style-1" ion-item *ngFor="let data of balanceData">
+    <button class="grid-style-1" ion-item *ngFor="let data of balanceData" (click)="gotoCorrespondingWallet(data, transactionData)"> 
       <ion-col>{{data.region}}</ion-col>
       <ion-col>{{data.coins}}</ion-col>
       <ion-col>{{data.balance}} {{showPercentage(data.percentageChange)}}</ion-col>
