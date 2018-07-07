@@ -108,7 +108,6 @@ export class OverviewPage {
   }
 
   gotoCorrespondingWallet(tempBalanceData, tempTransactionData) {
-    console.log(tempTransactionData);
     this.navCtrl.push(WalletPage, {
       balanceData: tempBalanceData,
       transactionData: tempTransactionData
