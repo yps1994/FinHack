@@ -50,6 +50,7 @@ export class MyApp {
     { title: 'Landing', component: 'LandingPage' },
     { title: 'Homepage', component: 'HomePage' },
     { title: 'Overview', component: 'OverviewPage' },
+    { title: 'Wallet', component: 'WalletPage' },
     { title: 'Content', component: 'ContentPage' },
     { title: 'Master Detail', component: 'ListMasterPage' },
     { title: 'Menu', component: 'MenuPage' },

@@ -52,7 +52,7 @@
       <ion-segment-button value="history">History</ion-segment-button>
     </ion-segment>
   </ion-toolbar>
-
+  
   <div [ngSwitch] = "action" >
     <div *ngSwitchCase="'buy'">
       <ion-grid>
@@ -107,27 +107,28 @@
       </ion-grid>
     </div>
     <div *ngSwitchCase="'history'">
-        <ion-grid>
-          <ion-row justify-content-between>
-            <ion-col>From 2018/03/03</ion-col>
-            <ion-col>To 2018/07/06</ion-col>
-          </ion-row>
-        </ion-grid>
+      <ion-grid>
+        <ion-row justify-content-between>
+          <ion-col>From 2018/03/03</ion-col>
+          <ion-col>To 2018/07/06</ion-col>
+        </ion-row>
+      </ion-grid>
 
-        <ion-grid>
-          <ion-row style="padding-top: 4px; padding-bottom: 4px; background-color: lightgray">{{transactionData.length}} Transaction History</ion-row>
-          <ion-item>
-            <ion-row *ngFor = "let data of transactionData">
-              <ion-col> {{data.date}} </ion-col>
-              <ion-col> {{data.type}} </ion-col>
-              <ion-col> {{data.amount}} PPC </ion-col>
-            </ion-row>
-          </ion-item>
-        </ion-grid>
+      <ion-grid>
+        <ion-row style="padding-top: 4px; padding-bottom: 4px; background-color: lightgray">{{transactionData.length}} Transaction History</ion-row>
+        <ion-item>
+          <div *ngFor="let data of transactionData; let i = index">
+            <div *ngIf="data.region == balanceData.region">
+              <ion-row>
+                <ion-col> {{data.date}} </ion-col>
+                <ion-col> {{data.type}} </ion-col>
+                <ion-col> {{data.amount}} PPC </ion-col>
+              </ion-row>
+            </div>
+          </div>
+        </ion-item>
+      </ion-grid>
     </div>
   </div>
+  
 </ion-content>
-
-<ion-footer>
-
-</ion-footer>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import { BalanceData, TransactionData } from '../Utility';
-import { WalletPage } from '../wallet/wallet';
+import { WalletPage } from '../';
 
 @IonicPage()
 @Component({
@@ -107,10 +107,11 @@ export class OverviewPage {
     return "";
   }
 
-  gotoCorrespondingWallet(tempRegionData, tempTransactionData) {
+  gotoCorrespondingWallet(tempBalanceData, tempTransactionData) {
+    console.log(tempTransactionData);
     this.navCtrl.push(WalletPage, {
-      region: tempRegionData,
+      balanceData: tempBalanceData,
       transactionData: tempTransactionData
-    })
+    });
   }
 }
