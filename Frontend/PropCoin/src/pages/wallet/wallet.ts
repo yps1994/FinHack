@@ -48,7 +48,7 @@ export class WalletPage {
 
       let alert = this.alertCtrl.create({
         title: 'Error',
-        subTitle: 'You do not have sufficient LOG to sell.',
+        subTitle: 'You do not have sufficient HKD to buy.',
         buttons: ['Dismiss']
       });
   
@@ -59,7 +59,7 @@ export class WalletPage {
 
       let alert = this.alertCtrl.create({
         title: 'Error',
-        subTitle: 'You do not have sufficient HKD to buy LOG.',
+        subTitle: 'You do not have sufficient LOG to sell.',
         buttons: ['Dismiss']
       });
   
