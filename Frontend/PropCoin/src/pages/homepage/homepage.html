@@ -12,14 +12,14 @@
   <ion-list no-lines>
     <ion-item  text-center class="LEGOcoin-icon"> <img ion-img width="80" height="60" src="/assets/img/LOGEcoinicon.png"> </ion-item>
     <ion-item text-center class="trans"> <h1> <b>LOGE Wallet</b> </h1> </ion-item>
-    <ion-item text-center class="trans"> <h6><p ion-text color="light">RISE ALONE YOUR HOUSE</h6></ion-item>
+    <ion-item text-center class="trans"> <h6><p ion-text color="light">RIDE ALONE YOUR HOUSE</h6></ion-item>
   </ion-list>
 
   <ion-grid>
     <ion-row class="grid-color grid-separator" *ngFor = "let data of regionalDataTrend">
       <ion-col> {{data.region}} </ion-col>
-      <ion-col > <img class="icon ion-home custom-icon" src="{{loadArrowFromIndex(data.upDownArrowIndex)}}"> {{data.index}} </ion-col>
-      <ion-col> {{data.percentageChange}} </ion-col>
+      <ion-col > <img class="icon ion-home custom-icon"  ion-img width="14" height="14" src="{{loadArrowFromIndex(data.upDownArrowIndex)}}"> {{data.index}} </ion-col>
+      <ion-col text-right> {{data.percentageChange}} %</ion-col>
     </ion-row>
   </ion-grid>
 

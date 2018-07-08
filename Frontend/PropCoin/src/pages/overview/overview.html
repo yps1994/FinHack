@@ -10,18 +10,18 @@
       </ion-col>
 
       <ion-col col-7>
-          <h6 align="right" class="whitetext">Hi {{user}}! </h6>
+          <h6 align="right" class="whitetext">Hi, {{user}}! </h6>
       </ion-col>
 
   </ion-row>
 
 </ion-header>
 
-<ion-content padding>
+<ion-content padding no-repeat center>
   <!-- <h6>Hi {{user}}! <br> </h6> -->
 
   <div text-center class="whitetext">
-    Your total Balance(HKD)
+    Your Total Balance (HKD)
     <br/>
     <h2>
       <b>$ {{balance}}</b>
@@ -31,8 +31,8 @@
   <h6 class="orangetext" ><br>WALLET</h6>
   <ion-grid class="grid-graycolor" text-center>
     <ion-row id="header">
-      <ion-col text-start>PPC Type</ion-col>
-      <ion-col>PPC</ion-col>
+      <ion-col text-start>LOG Type</ion-col>
+      <ion-col>LOG</ion-col>
       <ion-col>Balance(HKD)</ion-col>
     </ion-row>
   </ion-grid>
@@ -84,7 +84,7 @@
             <ion-row style="font-size: 14px; font-weight:bold; line-height:85%">
               <ion-col col-4> {{data.date}} </ion-col>
               <ion-col col-4> {{data.type}} </ion-col>
-              <ion-col col-4 text-center> {{data.amount}} PPC </ion-col>
+              <ion-col col-4 text-center> {{data.amount}} LOG </ion-col>
            </ion-row>
 
             <ion-row style="font-size: 11px; line-height:85%">
