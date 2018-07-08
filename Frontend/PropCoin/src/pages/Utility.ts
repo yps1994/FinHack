@@ -1,13 +1,15 @@
 export interface BalanceData {
-  region: string;
-  coins: number;
-  balance: number;
-  percentageChange: number;
+  accountID: String;
+  region: String;
+  coins: Number;
+  balance: Number;
+  percentageChange: Number;
+  img: String;
 }
 
 export interface TransactionData {
-  date: string;
-  type: string;
-  amount: number;
-  region: string;
+  date: String;
+  type: String;
+  amount: Number;
+  region: String;
 }

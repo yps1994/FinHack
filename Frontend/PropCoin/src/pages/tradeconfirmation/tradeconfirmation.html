@@ -22,24 +22,28 @@
     <ion-list>
       <ion-item>
         <ion-label>PPC Type</ion-label>
-        <ion-label>{{type}}</ion-label>
+        <ion-label>{{balanceData.region}}</ion-label>
       </ion-item>
       <ion-item>
         <ion-label>Trade Account</ion-label>
-        <ion-label>{{tradeAccount}}</ion-label>
+        <ion-label>{{balanceData.accountID}}</ion-label>
       </ion-item>
       <ion-item>
         <ion-label>Buy / Sell</ion-label>
         <ion-label>{{buySellType}}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Place Price</ion-label>
-        <ion-label>{{placePrice}}</ion-label>
+        <ion-label>Amount</ion-label>
+        <ion-label>{{PPCAmount}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Price</ion-label>
+        <ion-label>{{HKDAmount}}</ion-label>
       </ion-item>
       <ion-item-divider> </ion-item-divider>
       <ion-item>
         <ion-label>Trade Balance</ion-label>
-        <ion-label>{{tradeBalance}}</ion-label>
+        <ion-label>{{calculateTradeBalance()}}</ion-label>
       </ion-item>
       <ion-item>
         <ion-label>Validity Period</ion-label>

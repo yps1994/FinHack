@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, AlertController  } from 'ionic-angular';
 import { MainPage } from '../';
 
 export interface RegionalDataTrend {
@@ -18,7 +18,7 @@ export class HomePage {
 
   regionalDataTrend: RegionalDataTrend[];
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController) {
     this.regionalDataTrend = [
       {
         region: "Hong Kong Island",
@@ -62,5 +62,43 @@ export class HomePage {
   
   gotoMainPage() {
     this.navCtrl.push(MainPage);
+  }
+
+  presentAlertCreateAcc() {
+    let alert = this.alertCtrl.create({
+      title: 'Registration',
+      inputs: [
+        {
+          name:'email',
+          placeholder: 'Email'
+        }
+        ,{
+          name:'password',
+          placeholder: 'Password',
+          type:'password'
+        }
+        ,{
+          name:'reenterpassword',
+          placeholder: 'Please Re-enter Password',
+          type:'password'
+        }
+      ],
+      buttons: ['ENTER']
+    });
+    alert.present();
+  }
+
+  presentAlertFogetPassword() {
+    let alert = this.alertCtrl.create({
+      title: 'Please Enter Your <br>Registration Email',
+      inputs: [
+        {
+          name:'email',
+          placeholder: 'Email'
+        }
+      ],
+      buttons: ['ENTER']
+    });
+    alert.present();
   }
 }

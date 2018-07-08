@@ -2,6 +2,9 @@
 export const FirstRunPage = 'HomePage';
 
 export const MainPage = 'OverviewPage';
+export const WalletPage = 'WalletPage';
+
+export const TradeConfirmationPage = 'TradeConfirmationPage';
 
 // The main page the user will see as they use the app over a long period of time.
 // Change this if not using tabs

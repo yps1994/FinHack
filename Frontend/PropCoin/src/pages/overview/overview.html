@@ -1,15 +1,26 @@
-<ion-header>
+<ion-header no-border>
 
-  <ion-navbar>
-    <ion-title>Overview</ion-title>
-  </ion-navbar>
+  <ion-row>
+      <ion-col>
+          <ion-buttons start>
+              <button ion-button clear menuToggle class="menu-style">
+                <ion-icon name="menu"></ion-icon>
+              </button>
+          </ion-buttons>
+      </ion-col>
+
+      <ion-col col-7>
+          <h6 align="right" class="whitetext">Hi {{user}}! </h6>
+      </ion-col>
+
+  </ion-row>
 
 </ion-header>
 
 <ion-content padding>
-  <h6>Hi {{user}}, <br> </h6>
+  <!-- <h6>Hi {{user}}! <br> </h6> -->
 
-  <div text-center>
+  <div text-center class="whitetext">
     Your total Balance(HKD)
     <br/>
     <h2>
@@ -17,35 +28,63 @@
     </h2>
   </div>
 
-  <ion-grid text-center>
+  <h6 class="orangetext" ><br>WALLET</h6>
+  <ion-grid class="grid-graycolor" text-center>
     <ion-row id="header">
-      <ion-col>PPC Type</ion-col>
+      <ion-col text-start>PPC Type</ion-col>
       <ion-col>PPC</ion-col>
-      <ion-col>Balance</ion-col>
+      <ion-col>Balance(HKD)</ion-col>
     </ion-row>
   </ion-grid>
 
   <ion-list>
-    <!-- <button class="grid-style-1" ion-item *ngFor="let data of balanceData" (click)="gotoCorrespondingWallet(data.region, transactionData)"> -->
-    <button class="grid-style-1" ion-item *ngFor="let data of balanceData">
-      <ion-col>{{data.region}}</ion-col>
-      <ion-col>{{data.coins}}</ion-col>
-      <ion-col>{{data.balance}} {{showPercentage(data.percentageChange)}}</ion-col>
-    </button>  
+    <button detail-none class="grid-style-1" ion-item *ngFor="let data of balanceData" (click)="gotoCorrespondingWallet(data, transactionData)">
+    <!-- <button detail-none class="grid-style-1" ion-item *ngFor="let data of balanceData"> -->
+      <!-- <ion-col>{{data.region}}</ion-col> --><ion-row class="margin-fixing">
+      <ion-col><ion-avatar item-start> <img src={{data.img}}></ion-avatar></ion-col>
+      <ion-col text-center>{{data.coins | number:'1.3-3'}}</ion-col>
+      <ion-col>
+        <ion-row>{{data.balance | number:fractorSize}}</ion-row>
+        <ion-row *ngIf="data.percentageChange > 0 " class="greentext">
+          {{showPercentage(data.percentageChange)}}</ion-row>
+        <ion-row *ngIf="data.percentageChange < 0 " class="redtext">
+          {{showPercentage(data.percentageChange)}}</ion-row>
+        <ion-row *ngIf="data.percentageChange == 0 ">
+          {{showPercentage(data.percentageChange)}}</ion-row>
+      </ion-col>
+
+      </ion-row>
+    </button>
+
+    <!-- <ion-item>
+        <ion-avatar item-start>
+          <img src="img/avatar-cher.png">
+        </ion-avatar>
+        <h2>Cher</h2>
+        <p>Ugh. As if.</p>
+      </ion-item> -->
   </ion-list>
 
-  <br/>
+  <!-- <br/> -->
+  <h6 class="orangetext" ><br>RECENT HISTORY</h6>
 
+  <ion-grid class="grid-graycolor" text-center>
+      <ion-row id="header">
+        <ion-col col-4 text-center>DATE</ion-col>
+        <ion-col col-4 text-start>DETAIL</ion-col>
+        <ion-col col-4>BALANCE</ion-col>
+      </ion-row>
+  </ion-grid>
   <ion-grid>
-    <ion-row style="padding-top: 4px; padding-bottom: 4px; background-color: lightgray">{{transactionData.length}} Transaction History</ion-row>
-     
+    <ion-row style="padding-top: 4px; padding-bottom: 4px; background-color: lightgray"> Transactions</ion-row>
+
       <div *ngFor="let data of transactionData; let i = index">
         <div *ngIf="i<4">
           <ion-item>
             <ion-row style="font-size: 14px; font-weight:bold; line-height:85%">
               <ion-col col-4> {{data.date}} </ion-col>
               <ion-col col-4> {{data.type}} </ion-col>
-              <ion-col col-4> {{data.amount}} PPC </ion-col>
+              <ion-col col-4 text-center> {{data.amount}} PPC </ion-col>
            </ion-row>
 
             <ion-row style="font-size: 11px; line-height:85%">

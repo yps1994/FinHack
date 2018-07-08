@@ -10,7 +10,7 @@ import { WalletPage } from './wallet';
     IonicPageModule.forChild(WalletPage),
   ],
   exports: [
-    WalletPage
+    WalletPage,
   ]
 })
 

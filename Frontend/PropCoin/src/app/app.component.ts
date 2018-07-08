@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, animate } from '@angular/core';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Nav, Platform } from 'ionic-angular';
@@ -10,18 +10,19 @@ import { Settings } from '../providers';
   template: `<ion-menu [content]="content">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Pages</ion-title>
+        <ion-title>Menus</ion-title>
       </ion-toolbar>
     </ion-header>
 
+    <ion-content>
     <ion-list>
-      <button menuClose ion-item>
+      <button menuClose ion-item (click)=openHomePage()>
         Logout
       </button>
-      <button menuClose ion-item (click)="openHomePage()">
+      <button menuClose ion-item>
         Setting
       </button>
-      <button menuClose ion-item (click)="openOverview()">
+      <button menuClose ion-item (click)=openOverview()>
         Overview
       </button>
       <button menuClose ion-item>
@@ -37,6 +38,7 @@ import { Settings } from '../providers';
         Exchange(HKD-to-PPC)
       </button>
     </ion-list>
+    </ion-content>
 
   </ion-menu>
   <ion-nav #content [root]="rootPage"></ion-nav>`
@@ -47,11 +49,10 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    { title: 'Landing', component: 'LandingPage' },
     { title: 'Homepage', component: 'HomePage' },
     { title: 'Overview', component: 'OverviewPage' },
+    { title: 'Wallet', component: 'WalletPage' },
     { title: 'Content', component: 'ContentPage' },
-    { title: 'Master Detail', component: 'ListMasterPage' },
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Transfer', component: 'TransferPage' },
     { title: 'TradeConfirmation', component: 'TradeConfirmationPage' }
@@ -74,10 +75,10 @@ export class MyApp {
   }
   
   openHomePage(){
-    this.nav.push('HomePage');
+    this.nav.setRoot('HomePage');
   }
 
   openOverview(){
-    this.nav.push('Overview');
+    this.nav.push('OverviewPage');
   }
 }
