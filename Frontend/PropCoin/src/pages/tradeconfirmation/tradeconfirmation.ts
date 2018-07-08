@@ -24,11 +24,7 @@ export class TradeConfirmationPage {
     this.buySellType = navParams.get('buySellType');
     this.LOGAmount = navParams.get('LOGAmount');
     this.HKDAmount = navParams.get('HKDAmount');
-    
-    console.log(this.balanceData);
-    console.log(this.buySellType);
-    console.log(this.LOGAmount);
-    console.log(this.HKDAmount);
+
   }
 
   calculateTradeBalance() {

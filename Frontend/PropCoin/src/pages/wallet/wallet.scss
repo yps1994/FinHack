@@ -28,10 +28,18 @@ page-wallet {
         
     }
 
+    .bottom-layer {
+        z-index: 5;
+    }
+
+    .top-layer {
+        z-index: 10;
+    }
     .header-grid{
         background-color: white;
         border: 0px;
         border-radius: 10px 10px 0px 0px;
+        box-shadow: 1px 1px 5px grey;
     }
 
     .reduced-margin-cards {
