@@ -70,8 +70,14 @@ ion-header::after{
 }
 
 ion-content {
-    background-image: url('/assets/img/2.0_1.png') ;
-    background-size: cover;
+    background-image: url('/assets/img/2.0_1.png')  ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: red;
+}
+
+.background-color2 {
+    background-color: aqua;
 }
 
 ion-row {
